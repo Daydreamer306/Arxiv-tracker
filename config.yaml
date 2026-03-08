@@ -1,16 +1,31 @@
 categories: ["cs.CV", "cs.LG", "cs.AI", "cs.MA"]
 keywords:
-  - "AI agent"
-  - "vision agent"          # 视觉智能体（CV与Agent的结合）
-  - "image matching"        # 图像匹配
-  - "image registration"    # 图像配准
-  - "UAV"                   # 无人机视觉
-  - "satellite imagery"     # 卫星图像处理
-  - "multi-agent"
+  # --- 核心方法论 1：推理期扩展与强化学习 (Test-Time & RL) ---
+  - "test-time scaling"       # 推理期算力扩展/并行采样（论文1的核心杀手锏）
+  - "parallel sampling"       # 并行采样
+  - "GRPO"                    # 组相对策略优化（论文1使用的前沿RL算法）
+  - "visual reasoning"        # 视觉推理/视觉思维链
+  # --- 核心方法论 2：工具增强与视觉智能体 (Agent & Tool-use) ---
+  - "vision agent"            # 视觉智能体
+  - "tool-augmented"          # 工具增强（让大模型调用外部CV算法或地图API）
+  - "tool use vision"         # 视觉模型工具调用
+  # --- 核心难点突破：空间、几何与姿态感知 (Spatial & Geometric) ---
+  - "spatial reasoning"       # 空间推理能力（直击论文2中大模型的弱点）
+  - "geometric reasoning"     # 几何推理
+  - "pose estimation"         # 姿态估计/位姿估计
+  # --- 你的主场与跨界迁移 (Domain Applications) ---
+  - "cross-view"              # 跨视角匹配（保留你现有的 UAV/卫星图 匹配底座）
+  - "image registration"      # 图像配准
+  - "medical vision agent"    # 医疗视觉智能体
 
-# exclude_keywords: # 选择排除的关键词
-#   - "Large Language Model"
-#   - "LLM"
+exclude_keywords: # 排除纯文本或与视觉无关的噪音
+  - "text-to-text"
+  - "NLP"
+  - "embodied"                    # 屏蔽具身智能
+  - "robotics"                    # 屏蔽机器人
+  - "LLM"                         # 屏蔽纯大语言模型
+  - "natural language processing" # 屏蔽纯自然语言处理
+  
   
 logic: "AND"                 # 组间逻辑：categories 与 keywords 间 AND/OR
 max_results: 30
