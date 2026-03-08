@@ -1,22 +1,21 @@
-categories: ["cs.CV", "cs.LG", "cs.AI", "cs.MA"]
+categories: ["cs.CV", "cs.AI"] # 保持专注视觉和人工智能大类
 keywords:
-  # --- 核心方法论 1：推理期扩展与强化学习 (Test-Time & RL) ---
-  - "test-time scaling"       # 推理期算力扩展/并行采样（论文1的核心杀手锏）
-  - "parallel sampling"       # 并行采样
-  - "GRPO"                    # 组相对策略优化（论文1使用的前沿RL算法）
-  - "visual reasoning"        # 视觉推理/视觉思维链
-  # --- 核心方法论 2：工具增强与视觉智能体 (Agent & Tool-use) ---
-  - "vision agent"            # 视觉智能体
-  - "tool-augmented"          # 工具增强（让大模型调用外部CV算法或地图API）
-  - "tool use vision"         # 视觉模型工具调用
-  # --- 核心难点突破：空间、几何与姿态感知 (Spatial & Geometric) ---
-  - "spatial reasoning"       # 空间推理能力（直击论文2中大模型的弱点）
-  - "geometric reasoning"     # 几何推理
-  - "pose estimation"         # 姿态估计/位姿估计
-  # --- 你的主场与跨界迁移 (Domain Applications) ---
-  - "cross-view"              # 跨视角匹配（保留你现有的 UAV/卫星图 匹配底座）
+  # --- 1. 你的视觉与图像基础盘 (大幅拓宽，保证图像论文充足) ---
+  - "image matching"          # 图像匹配（核心底盘）
   - "image registration"      # 图像配准
-  - "medical vision agent"    # 医疗视觉智能体
+  - "homography"              # 单应性（跨视角、图像拼接的底层核心，容易出高质量CV硬核论文）
+  - "cross-view"              # 跨视角
+  - "UAV"                     # 无人机
+  - "satellite image"         # 卫星图像
+  # --- 2. 视觉智能体与空间推理 (拆解为短词，提高命中率) ---
+  - "vision agent"            # 视觉智能体
+  - "visual reasoning"        # 视觉推理
+  - "spatial reasoning"       # 空间推理
+  - "pose estimation"         # 姿态估计
+  # --- 3. 前沿模型与强化学习 (保留两篇论文的核心思路) ---
+  - "vision-language model"   # 视觉语言模型（覆盖面广，保证能收到最新的多模态论文）
+  - "test-time"               # 仅保留 test-time（覆盖 test-time scaling / compute 等变体）
+  - "RLHF vision"             # 视觉强化学习
 
 exclude_keywords: # 排除纯文本或与视觉无关的噪音
   - "text-to-text"
