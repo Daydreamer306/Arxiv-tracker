@@ -1,29 +1,33 @@
-categories: ["cs.CV", "cs.AI"] # 保持专注视觉和人工智能大类
+categories: ["cs.CV", "cs.AI"] 
 keywords:
-  # --- 1. 你的视觉与图像基础盘 (大幅拓宽，保证图像论文充足) ---
-  - "image matching"          # 图像匹配（核心底盘）
-  - "image registration"      # 图像配准
-  - "homography"              # 单应性（跨视角、图像拼接的底层核心，容易出高质量CV硬核论文）
-  - "cross-view"              # 跨视角
-  - "UAV"                     # 无人机
-  - "satellite image"         # 卫星图像
-  # --- 2. 视觉智能体与空间推理 (拆解为短词，提高命中率) ---
-  - "vision agent"            # 视觉智能体
-  - "visual reasoning"        # 视觉推理
-  - "spatial reasoning"       # 空间推理
-  - "pose estimation"         # 姿态估计
-  # --- 3. 前沿模型与强化学习 (保留两篇论文的核心思路) ---
-  - "vision-language model"   # 视觉语言模型（覆盖面广，保证能收到最新的多模态论文）
-  - "test-time"               # 仅保留 test-time（覆盖 test-time scaling / compute 等变体）
-  - "RLHF vision"             # 视觉强化学习
+  # --- 1. 核心定位与视觉基础 (对齐 GeoAgent 及跨视角任务) ---
+  - "image matching"          
+  - "visual localization"      # 新增：视觉定位，覆盖比 registration 更广的顶层任务
+  - "image geolocation"        # 新增：地理定位，直接命中 GeoAgent 所在子领域
+  - "cross-view"              
+  - "homography"              
+  - "remote sensing"           # 整合：用遥感替代零散的 UAV/satellite，覆盖面更规范
+  
+  # --- 2. 空间逻辑与视觉智能体 ---
+  - "vision agent"            
+  - "visual reasoning"        
+  - "spatial reasoning"       
+  - "camera pose estimation"   # 修正：必须加 camera，否则会被海量的 Human Pose Estimation（人体姿态估计）淹没
+  
+  # --- 3. 训练范式与多模态模型 (适配强化学习与推理优化) ---
+  - "vision-language model"   
+  - "VLM"                      # 新增：学术界常用的缩写，必须单独列出
+  - "test-time"               
+  - "visual reward model"      # 修改：RLHF vision 过于局限，reward model 更贴合当前强化学习在 CV 的应用设计
+  - "GRPO"                     # 新增：当前大模型强化学习主流算法，极易产出高质量对齐论文
 
-exclude_keywords: # 排除纯文本或与视觉无关的噪音
+exclude_keywords:
   - "text-to-text"
-  - "NLP"
-  - "embodied"                    # 屏蔽具身智能
-  - "robotics"                    # 屏蔽机器人
-  - "LLM"                         # 屏蔽纯大语言模型
-  - "natural language processing" # 屏蔽纯自然语言处理
+  - "pure NLP"                 # 修正：缩小屏蔽范围
+  - "embodied"                
+  - "robotics"                
+  - "human pose"               # 新增：精确屏蔽人体姿态噪音
+  - "gait recognition"         # 新增：屏蔽步态识别噪音
   
   
 logic: "AND"                 # 组间逻辑：categories 与 keywords 间 AND/OR
